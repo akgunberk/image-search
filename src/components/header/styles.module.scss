@@ -1,0 +1,11 @@
+@import "../../assets/styles/colors";
+
+.header {
+  width: 100vw;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $bg-color;
+  padding: 0 50px;
+}

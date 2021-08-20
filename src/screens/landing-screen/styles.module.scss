@@ -1,0 +1,42 @@
+@import "../../assets/styles/colors";
+
+.landingWrapper {
+  width: 100vw;
+  height: 100vh;
+  background: $bg-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .brandName {
+    font-weight: normal;
+    color: white;
+  }
+
+  .query,
+  .dropdown,
+  .action {
+    width: 400px;
+    height: 50px;
+  }
+
+  .query {
+    margin: 50px 0 20px;
+
+    &:focus,
+    &:active {
+      border: none;
+    }
+  }
+
+  .dropdown {
+    margin-bottom: 70px;
+  }
+
+  .action {
+    width: 244px;
+    font-weight: bold;
+  }
+}
