@@ -1,17 +1,21 @@
-import classNames from "classnames";
+import { useState } from "react";
 import { Button } from "components";
-import { useEffect, useState } from "react";
-import { PubSub, SUBSCRIPTIONS } from "utils";
 import Next from "assets/icons/next.svg";
+import classNames from "classnames";
 import styles from "./styles.module.scss";
 
-export const Pagination: React.FC<{ maxPage: number }> = ({ maxPage }) => {
-  const [activePage, setActivePage] = useState(1);
-  const [pageMultiplier, setPageMultiplier] = useState(1);
+interface IPagination {
+  maxPage: number;
+  activePage: number;
+  setActivePage: React.Dispatch<React.SetStateAction<number>>;
+}
 
-  useEffect(() => {
-    PubSub.dispatch(SUBSCRIPTIONS.PAGINATION, activePage);
-  }, [activePage]);
+export const Pagination: React.FC<IPagination> = ({
+  maxPage,
+  activePage,
+  setActivePage,
+}) => {
+  const [pageMultiplier, setPageMultiplier] = useState(1);
 
   const back = () => {
     if (activePage % 10 === 0) setPageMultiplier(pageMultiplier - 1);
@@ -19,8 +23,9 @@ export const Pagination: React.FC<{ maxPage: number }> = ({ maxPage }) => {
   };
 
   const next = () => {
+    console.log(activePage % 10 === 0);
     if (activePage % 10 === 0) setPageMultiplier(pageMultiplier + 1);
-    setActivePage(activePage + 1);
+    setActivePage(activePage < maxPage ? activePage + 1 : activePage);
   };
 
   return (
@@ -34,21 +39,23 @@ export const Pagination: React.FC<{ maxPage: number }> = ({ maxPage }) => {
         className={styles.back}
       />
       <div className={styles.pageNumbers}>
-        {Array.from(
-          { length: 10 },
-          (_, index) =>
-            index + 1 <= maxPage && (
+        {Array.from({ length: 10 }, (_, index) => {
+          const pageNumber = pageMultiplier * 10 + index + 1;
+          return (
+            pageNumber <= maxPage && (
               <Button
                 key={index}
                 className={classNames(styles.page, {
-                  [styles.active]: index + 1 === activePage,
+                  [styles.active]: pageNumber === activePage,
                 })}
-                onClick={() => setActivePage(index + 1)}
+                onClick={() => setActivePage(pageNumber)}
               >
-                {index + 1}
+                {console.log(activePage, pageNumber, pageMultiplier)}
+                {pageNumber}
               </Button>
             )
-        )}
+          );
+        })}
       </div>
       <img
         onClick={next}

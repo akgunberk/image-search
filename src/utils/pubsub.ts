@@ -27,5 +27,4 @@ export const PubSub = {
 export const SUBSCRIPTIONS = {
   SHOW_SPINNER: "SHOW_SPINNER",
   HIDE_SPINNER: "HIDE",
-  PAGINATION: "PAGINATION",
 };

@@ -17,7 +17,7 @@ Components are divided as atoms and molecules. For the fundamental components su
 If you have an abstraction made from a screen which consists more than 3-4 atom components, please add this as a component/molecules with the proper name.
 Screens folder usually includes screens made with 3-4 molecule components. Follow these guide when you develop your screens.
 
-Useful hooks useOnClickOutside,usePagination etc. defined under hooks folder.
+Useful hooks useOnClickOutside,useToggle etc. defined under hooks folder.
 If you think the code will be cleaner with a custom hook implementation, please add your custom hook under this folder.
 
 In this project react-query/axios is used for fetching api caching responses. Define your api methods under services folder with the name of your endpoint.
