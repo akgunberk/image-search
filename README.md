@@ -1,4 +1,4 @@
-# [Image Search Unsplash API](https://github.com/facebook/create-react-app)
+# [Image Search Unsplash API](https://github.com/facebook/create-react-app)(DEMO)
 
 This project is a SPA implementation of unsplash-api with an ui to search based on query and collection chosen.
 
