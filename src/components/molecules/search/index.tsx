@@ -20,7 +20,8 @@ export const Search: React.FC<ISearch> = ({ className = "" }) => {
 
   const { isError, data: collectionList } = useQuery<any>(
     "collections",
-    getCollections
+    getCollections,
+    { refetchInterval: false }
   );
 
   const handleQueryChange = (event: React.ChangeEvent<HTMLInputElement>) =>

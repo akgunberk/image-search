@@ -7,7 +7,7 @@ import { LandingScreen, SearchScreen } from "screens";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchInterval: 5000,
+      refetchInterval: false,
       retry: 3,
     },
   },
