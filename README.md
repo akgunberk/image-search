@@ -1,48 +1,30 @@
 # [Image Search Unsplash API](https://github.com/facebook/create-react-app)
 
-# Getting Started with Create React App
+This project is a SPA implementation of unsplash-api with an ui to search based on query and collection chosen.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+e.g Someone might be interested in nature photography and want to explore photos taken in Istanbul.
+Then, they can type in `Istanbul` and select `Nature` from the dropdown to search Unsplash.
+If none chosen, you'll search with default query "Istanbul".
 
-## Available Scripts
+react-router-dom is used from routing and all the routes can be seen Routes.tsx. This file is the index file of the React App.
+In Router, you can see the screen for the matched urls. If you want to add more screen, PR's are welcome.
 
-In the project directory, you can run:
+# Guideline
 
-### `yarn start`
+Assets include icons(svgs) and styles folder(scss variables), please use these file for your icons and scss implementations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Components are divided as atoms and molecules. For the fundamental components such as Modal or Portal please use atoms.
+If you have an abstraction made from a screen which consists more than 3-4 atom components, please add this as a component/molecules with the proper name.
+Screens folder usually includes screens made with 3-4 molecule components. Follow these guide when you develop your screens.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Useful hooks useOnClickOutside,usePagination etc. defined under hooks folder.
+If you think the code will be cleaner with a custom hook implementation, please add your custom hook under this folder.
 
-### `yarn test`
+In this project react-query/axios is used for fetching api caching responses. Define your api methods under services folder with the name of your endpoint.
+For the sake of brevity, group your endpoints for the similar purposes e.g grouping search and track-download service under services/photos.ts If possible, add proper types for your response.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Any other utils or so called helpers should be added under utils folder. PubSub and Axios API instance implementation are great examples for files should be under utils. Project does not have a state management library like redux to be as much as lightweight as possible. Use react-query for caching responses and you can use PubsSub module for your other needs.
 
-### `yarn build`
+This project use normalize.scss of CRA for normalization and css modules for any other components. So, if you need to style your component, add styles.module.scss in component folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any other questions, first of all, please keep folder structure and conventions steady in project. If you have any other improvements or questions feel free to contact me.
