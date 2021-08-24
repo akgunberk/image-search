@@ -1,0 +1,68 @@
+.modal {
+  /*   & > div:first-child {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
+}
+
+.photoInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.image {
+  display: block;
+}
+
+.profile {
+  border-radius: 100%;
+  border: 2px solid lightslategrey;
+}
+
+.social {
+  margin-left: 20px;
+
+  .username,
+  .insta {
+    display: block;
+  }
+
+  .username {
+    text-transform: capitalize;
+    color: black;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .insta {
+    font-size: 18px;
+    color: #2a2b8d;
+  }
+}
+
+.download {
+  position: relative;
+  cursor: pointer;
+  max-width: 200px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #2a2b8d;
+  border: 2px solid #2a2b8d;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  .downloadText {
+    margin-left: 10px;
+  }
+}

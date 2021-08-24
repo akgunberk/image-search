@@ -1,11 +1,6 @@
 @import "../../assets/styles/colors";
 
 .landingWrapper {
-  width: 100vw;
-  min-height: 100vh;
-  height: auto;
-  background: $bg-color;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,13 +37,19 @@
   }
 }
 
-.search {
-  flex-grow: 0;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 245px;
+.masonry {
+  column-count: 3;
+  column-gap: 20px;
 
-  & > :last-child {
-    margin-top: 50px;
+  img {
+    display: block;
+    max-width: 100%;
+
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
   }
 }

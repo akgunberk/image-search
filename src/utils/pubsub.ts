@@ -1,4 +1,4 @@
-const PubSub = {
+export const PubSub = {
   _subscriptions: new Map(),
   clear() {
     this._subscriptions.clear();
@@ -9,7 +9,7 @@ const PubSub = {
     }
     return this._subscriptions.get(key);
   },
-  subscribe(key: string, fn: () => void) {
+  subscribe(key: string, fn: (payload: any) => void) {
     const subs = this.get(key);
     subs.set(subs.size, fn);
 
@@ -24,4 +24,8 @@ const PubSub = {
   },
 };
 
-export default PubSub;
+export const SUBSCRIPTIONS = {
+  SHOW_SPINNER: "SHOW_SPINNER",
+  HIDE_SPINNER: "HIDE",
+  PAGINATION: "PAGINATION",
+};

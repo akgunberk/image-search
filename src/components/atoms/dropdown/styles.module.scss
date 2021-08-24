@@ -1,0 +1,43 @@
+@import "../../../assets/styles/_colors";
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  min-height: 50px;
+  background: white;
+
+  .placeholder {
+    color: $shadow;
+  }
+}
+
+.options {
+  position: absolute;
+  top: 50px;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownItem {
+  padding: 15px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+
+  color: #050417;
+
+  &:hover {
+    background: $shadow;
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}

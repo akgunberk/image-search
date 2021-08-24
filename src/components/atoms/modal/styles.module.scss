@@ -1,0 +1,25 @@
+@import "../../../assets/styles/_colors.scss";
+
+.dimmer,
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dimmer {
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background: rgba($color: $black-pearl, $alpha: 0.8);
+}
+
+.modal {
+  z-index: 100;
+  max-height: 80%;
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  overflow-y: scroll;
+}

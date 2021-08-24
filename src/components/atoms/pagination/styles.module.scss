@@ -1,0 +1,40 @@
+.pagination {
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.page {
+  width: 30px;
+  height: 30px;
+  background: lightgray;
+  border-radius: 100%;
+
+  &:hover {
+    background: darken($color: gray, $amount: 0.2);
+  }
+}
+
+.pageNumbers {
+  margin: 0 20px;
+  display: flex;
+  & * {
+    margin-right: 6px;
+  }
+}
+
+.active {
+  background: gray;
+}
+
+.next,
+.back {
+  cursor: pointer;
+}
+
+.back {
+  transform: rotateZ(-180deg);
+}

@@ -1,0 +1,29 @@
+@import "../../../assets/styles/colors";
+
+.wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 80%;
+
+  .query,
+  .dropdown,
+  .action {
+    width: 400px;
+    height: 50px;
+  }
+
+  .query {
+    &:focus,
+    &:active {
+      border: none;
+    }
+  }
+
+  .action {
+    width: 244px;
+    font-weight: bold;
+  }
+}

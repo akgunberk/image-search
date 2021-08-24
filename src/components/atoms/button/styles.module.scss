@@ -1,0 +1,13 @@
+@import "../../../assets/styles/_colors";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+  width: auto;
+  height: 50px;
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: white;
+}

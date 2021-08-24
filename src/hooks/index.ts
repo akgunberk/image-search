@@ -1,2 +1,3 @@
-export { default as useOnClickOutside } from "./useOnClickOutside";
-export { default as useToggle } from "./useToggle";
+export * from "./useLockBodyScroll";
+export * from "./useOnClickOutside";
+export * from "./useToggle";
