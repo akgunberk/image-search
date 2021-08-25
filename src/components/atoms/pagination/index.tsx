@@ -15,7 +15,7 @@ export const Pagination: React.FC<IPagination> = ({
   activePage,
   setActivePage,
 }) => {
-  const [pageMultiplier, setPageMultiplier] = useState(1);
+  const [pageMultiplier, setPageMultiplier] = useState(0);
 
   const back = () => {
     if (activePage % 10 === 0) setPageMultiplier(pageMultiplier - 1);
@@ -50,7 +50,6 @@ export const Pagination: React.FC<IPagination> = ({
                 })}
                 onClick={() => setActivePage(pageNumber)}
               >
-                {console.log(activePage, pageNumber, pageMultiplier)}
                 {pageNumber}
               </Button>
             )
