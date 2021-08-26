@@ -6,10 +6,11 @@ e.g Someone might be interested in nature photography and want to explore photos
 Then, they can type in `Istanbul` and select `Nature` from the dropdown to search Unsplash.
 If none chosen, you'll search with default query "Istanbul".
 
-react-router-dom is used from routing and all the routes can be seen Routes.tsx. This file is the index file of the React App.
-In Router, you can see the screen for the matched urls. If you want to add more screen, PR's are welcome.
 
 # Guideline
+
+react-router-dom is used from routing and all the routes can be seen Routes.tsx. This file is the index file of the React App.
+In Router, you can see the screen for the matched urls. If you want to add more screen, PR's are welcome.
 
 Assets include icons(svgs) and styles folder(scss variables), please use these file for your icons and scss implementations.
 
