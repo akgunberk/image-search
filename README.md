@@ -28,4 +28,4 @@ Any other utils or so called helpers should be added under utils folder. PubSub 
 
 This project use normalize.scss of CRA for normalization and css modules for any other components. So, if you need to style your component, add styles.module.scss in component folder.
 
-For any other questions, first of all, please keep folder structure and conventions steady in project. If you have any other improvements or questions feel free to contact me.
+For any other questions or other improvements - first of all, please keep folder structure and conventions steady in project- feel free to contact me.
